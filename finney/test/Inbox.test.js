@@ -12,6 +12,8 @@ const { interface, bytecode } = require('../compile');
 
 let accounts;
 let inbox;
+const INITIAL_STRING = 'Hi there!';
+
 beforeEach(async () => {
 // Get a list of alll accounts
 accounts = await web3.eth.getAccounts()

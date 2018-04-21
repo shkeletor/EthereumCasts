@@ -15,11 +15,8 @@ beforeEach(async () => {
 // Use one of those accouts to deploy
 // the contract
   inbox = await new web3.eth.Contract(JSON.parse(interface))
-  .deploy({ data: bytecode, arguments:[INITIAL_STRING] });
-  .send({ from: accounts[0], gas: '1000000'});
-
-  // ADD THIS ONE LINE RIGHT HERE!!! <--------
-  inbox.setProvider(provider);
+  .deploy({ data: bytecode, arguments:[INITIAL_STRING] })
+  .send({ from: accounts[0], gas: '1000000' });
 });
 
 describe('Inbox', () => {
@@ -28,7 +25,7 @@ describe('Inbox', () => {
     });
 
     it('has a default message', async () => {
-      const massage = await inbox.methods.message().call();
+      const message = await inbox.methods.message().call();
       assert.equal(message, INITIAL_STRING);
       });
 

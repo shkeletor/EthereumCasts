@@ -1,6 +1,8 @@
-./private/inbox_anatoly/node_modules/*
-./private/inbox_anatoly/node_modules
-*/.DS_Store
 private/inbox_anatoly/node_modules/*
+private/inbox_anatoly/node_modules
+*/.DS_Store
+private/lottery_anatoly/node_modules/*
 .DS_Store
 private/inbox_anatoly/.vscode/settings.json
+deployment-config.json
+private/lottery_anatoly/.vscode/settings.json
